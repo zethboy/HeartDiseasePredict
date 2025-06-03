@@ -47,6 +47,7 @@ input_data['ChestPainType'] = encoders['ChestPainType'].transform(input_data['Ch
 input_data['RestingECG'] = encoders['RestingECG'].transform(input_data['RestingECG'])
 input_data['ExerciseAngina'] = encoders['ExerciseAngina'].transform(input_data['ExerciseAngina'])
 input_data['ST_Slope'] = encoders['ST_Slope'].transform(input_data['ST_Slope'])
+input_data['Cholesterol_to_MaxHR'] = input_data['Cholesterol'] / input_data['MaxHR']
 
 # Scale numerical features
 numerical_cols = ['Age', 'RestingBP', 'Cholesterol', 'FastingBS', 'MaxHR', 'Oldpeak']
